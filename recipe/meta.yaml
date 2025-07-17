@@ -28,9 +28,11 @@ requirements:
     - cross-r-base {{ r_base }}    # [build_platform != target_platform]
   host:
     - r-base
+    - r-cli
     - r-dplyr
+    - r-lifecycle
     - r-magrittr
-    - r-metacore >=0.0.4
+    - r-metacore >=0.2.0
     - r-purrr
     - r-rlang
     - r-stringr
@@ -38,9 +40,11 @@ requirements:
     - r-tidyr
   run:
     - r-base
+    - r-cli
     - r-dplyr
+    - r-lifecycle
     - r-magrittr
-    - r-metacore >=0.0.4
+    - r-metacore >=0.2.0
     - r-purrr
     - r-rlang
     - r-stringr
