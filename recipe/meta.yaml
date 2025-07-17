@@ -1,4 +1,4 @@
-{% set version = '0.1.6' %}
+{% set version = "0.2.0" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,7 +9,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/metatools_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/metatools/metatools_{{ version }}.tar.gz
-  sha256: 09da79f39e690547db4e7652e7fa02f3c785b7473d6996586b62f2f91d3c3927
+  sha256: 8042b6df4a329a6437e0b7a02f1b1a944949e8341761524c16b45e2547be7ebf
 
 build:
   number: 0
@@ -28,9 +28,11 @@ requirements:
     - cross-r-base {{ r_base }}    # [build_platform != target_platform]
   host:
     - r-base
+    - r-cli
     - r-dplyr
+    - r-lifecycle
     - r-magrittr
-    - r-metacore >=0.0.4
+    - r-metacore >=0.2.0
     - r-purrr
     - r-rlang
     - r-stringr
@@ -38,9 +40,11 @@ requirements:
     - r-tidyr
   run:
     - r-base
+    - r-cli
     - r-dplyr
+    - r-lifecycle
     - r-magrittr
-    - r-metacore >=0.0.4
+    - r-metacore >=0.2.0
     - r-purrr
     - r-rlang
     - r-stringr
@@ -55,8 +59,7 @@ test:
 about:
   home: https://github.com/pharmaverse/metatools, https://pharmaverse.github.io/metatools/
   license: MIT
-  summary: Uses the metadata information stored in 'metacore' objects to check and build metadata
-    associated columns.
+  summary: Uses the metadata information stored in 'metacore' objects to check and build metadata associated columns.
   license_family: MIT
   license_file:
     - '{{ environ["PREFIX"] }}/lib/R/share/licenses/MIT'
