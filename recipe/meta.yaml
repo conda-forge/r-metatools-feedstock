@@ -1,4 +1,4 @@
-{% set version = "0.2.0" %}
+{% set version = "0.3.0" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,10 +9,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/metatools_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/metatools/metatools_{{ version }}.tar.gz
-  sha256: 8042b6df4a329a6437e0b7a02f1b1a944949e8341761524c16b45e2547be7ebf
+  sha256: 845fa93d4337e77d8b8ba0a73bddd589c1963d0ee02eb7187aaac28563d9d400
 
 build:
-  number: 1
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
